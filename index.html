@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+    }
+    .contaner{
+        background-color: rgb(232, 123, 168);
+        padding: 1rem 1.5rem;
+        border-radius: 15px;
+        width: 240px;
+        font-size: 20px;
+        font-style: italic;
+    }
+    .btn{
+        padding: 10px 20px;
+        border: none;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.1s ease;
+    }
+    .btnPrimary{
+        color: rgb(37, 210, 210);
+    }
+    .btnSecondary{
+        color: rgb(37, 210, 210);
+        padding: 0.6rem 0.7rem;
+    }
+    .moving{
+        margin-left: 80px ;
+    }
+</style>
+<body>
+    <section class="contaner">
+        <h1 class="text">I LOVE YOU 💕</h1>
+        <button class="btn  btnPrimary">Yes</button>
+        <button class="btn  btnSecondary">No</button>
+    </section>
+    <script>
+        const btnAgree = document.querySelector('.btnPrimary');
+        const btnDisagree = document.querySelector('.btnSecondary');
+        const text = document.querySelector('.text');
+        btnAgree.addEventListener( "click" , ()=>{
+            text.innerText="I LOVE YOU TOO BABY 💏"
+        });
+        btnDisagree.addEventListener("mouseover", () =>{
+            if(btnDisagree.classList.contains("moving")){
+                btnDisagree.classList.remove("moving");
+            }else{
+                btnDisagree.classList.add("moving");
+            }
+        })
+    </script>
+</body>
+</html>
